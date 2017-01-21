@@ -10,7 +10,6 @@ import org.hibernate.validator.constraints.Email;
 
 @Entity
 public class Contato {
-	
 	@Id
 	@GeneratedValue
 	private long id;
