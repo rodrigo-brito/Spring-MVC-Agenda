@@ -25,7 +25,7 @@ public class AgendaController {
 		return "listar";
 	}
 	
-	@RequestMapping("/listar")
+	@RequestMapping("/salvar")
 	public String salvar(Model model, @Valid Contato contato, BindingResult result){
 		if(result.hasErrors()){
 			return "cadastrar";
