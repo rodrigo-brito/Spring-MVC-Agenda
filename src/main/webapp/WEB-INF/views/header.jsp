@@ -26,9 +26,9 @@
 	</nav>
 	<div class="container">
 		<div id="messages">
-			<c:if test="${ not empty message }">
+			<c:if test="${ not empty param.message }">
 				<div class="alert alert-success">
-					<p>${ message }</p>
+					<p>${ param.message }</p>
 				</div>
 			</c:if>
 			<c:if test="${ not empty error }">

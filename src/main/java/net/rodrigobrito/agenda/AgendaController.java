@@ -36,6 +36,7 @@ public class AgendaController {
 	@RequestMapping("/salvar")
 	public String salvar(Model model, @Valid Contato contato, BindingResult result){
 		if(result.hasErrors()){
+			model.addAttribute("title", "Cadastrar Contato");
 			model.addAttribute("error", "Dados inválidos, por favor verifique os valores.");
 			return "cadastrar";
 		}
@@ -59,14 +60,17 @@ public class AgendaController {
 	}
 	
 	@RequestMapping("/atualizar")
-	public String atualizar(@Valid Contato contato, Model model, BindingResult result){
+	public String atualizar(Model model, @Valid Contato contato, BindingResult result){
 		if(result.hasErrors()){
 			model.addAttribute("title", "Editar contato");
+			model.addAttribute("error", "Dados inválidos, por favor verifique os valores.");
 			model.addAttribute("contato", contato);
 			return "editar";
 		}
+		ContatoDAO contatoDAO = new ContatoDAO();
+		contatoDAO.update(contato);
 		model.addAttribute("message", "Contato atualizado com sucesso");
-		return "listar";
+		return "redirect:listar";
 	}
 	
 	@RequestMapping("/excluir")

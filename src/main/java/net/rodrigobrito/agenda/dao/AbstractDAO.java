@@ -6,9 +6,10 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.validation.Valid;
 
+import net.rodrigobrito.agenda.model.Contato;
 import net.rodrigobrito.agenda.util.JPAUtil;
 
-public class AbstractDAO<T>{
+public class AbstractDAO<T> implements GenericDAO<T> {
 	protected EntityManager entityManager;
 	private Class<T> entityClass;
 

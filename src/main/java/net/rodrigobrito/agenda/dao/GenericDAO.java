@@ -7,5 +7,4 @@ public interface GenericDAO<T> {
 	public void save(T entity);
 	public void update(T entity);
 	public void remove(long id);
-	public List<T> findAll();
 }
