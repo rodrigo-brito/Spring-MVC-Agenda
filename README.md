@@ -1,2 +1,8 @@
 # Spring-MVC-Agenda
-Uma simples lista de tarefas desenvolvida com Spring MVC
+Uma simples agenda de contatos desenvolvida com Spring MVC
+
+## Tecnologias utilizadas
+- Java EE 7
+- Spring MVC
+- Hibernate
+- MySql
