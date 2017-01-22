@@ -7,6 +7,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 public class Contato {
@@ -14,11 +15,14 @@ public class Contato {
 	@GeneratedValue
 	private long id;
 	@NotNull
+	@NotEmpty
 	private String nome;
 	@NotNull
+	@NotEmpty
 	@Size(min=8,max=15)
 	private String telefone;
 	@Email
+	@NotEmpty
 	private String email;
 	
 	public Contato() { }

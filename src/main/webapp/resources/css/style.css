@@ -1,3 +1,7 @@
 #main-panel {
 	margin-top: 30px;
 }
+
+.label-error {
+	color: #c7254e;
+}
